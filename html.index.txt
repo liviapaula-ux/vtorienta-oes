@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Uso do Vale-Transporte iFood</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: #3e3e3e;
+        }
+
+        .ifood-red { color: #EA1D2C; }
+        .bg-ifood-red { background-color: #EA1D2C; }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s;
+        }
+
+        .check-icon { color: #22c55e; }
+        .cross-icon { color: #ef4444; }
+
+        .illustration-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem;
+            background: #fff5f5;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .path-line {
+            height: 4px;
+            background: repeating-linear-gradient(to right, #EA1D2C, #EA1D2C 10px, transparent 10px, transparent 20px);
+            flex-grow: 1;
+            margin: 0 1rem;
+            position: relative;
+        }
+
+        .path-line::after {
+            content: '🚌';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <div class="inline-block p-4 mb-4">
+                <svg width="120" height="40" viewBox="0 0 100 40" fill="#EA1D2C" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 20C10 10 20 10 20 10H80C80 10 90 10 90 20C90 30 80 30 80 30H20C20 30 10 30 10 20Z" opacity="0.2"/>
+                    <text x="10" y="28" font-family="Arial" font-weight="bold" font-size="20">iFood</text>
+                </svg>
+            </div>
+            <h1 class="text-4xl font-bold mb-2">Manual do Vale-Transporte</h1>
+            <p class="text-gray-600 text-lg">Como usar seu benefício de mobilidade com responsabilidade.</p>
+        </header>
+
+        <!-- Como funciona -->
+        <section class="card p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4 flex items-center">
+                <span class="mr-2">⚙️</span> Como funciona no iFood?
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-4 border border-gray-100 rounded-lg bg-gray-50">
+                    <span class="text-3xl mb-2 block">📅</span>
+                    <h3 class="font-bold mb-1">Sinalização</h3>
+                    <p class="text-sm text-gray-600">Você indica no sistema quantos dias por semana irá ao escritório.</p>
+                </div>
+                <div class="p-4 border border-gray-100 rounded-lg bg-gray-50">
+                    <span class="text-3xl mb-2 block">💳</span>
+                    <h3 class="font-bold mb-1">Pagamento</h3>
+                    <p class="text-sm text-gray-600">O valor cai no seu cartão iFood Benefícios (Saldo Livre ou Mobilidade).</p>
+                </div>
+                <div class="p-4 border border-gray-100 rounded-lg bg-gray-50">
+                    <span class="text-3xl mb-2 block">🎫</span>
+                    <h3 class="font-bold mb-1">Autonomia</h3>
+                    <p class="text-sm text-gray-600">Você mesmo realiza a compra das passagens conforme sua necessidade.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- A Regra de Ouro -->
+        <section class="card p-6 mb-8 border-l-8 border-ifood-red">
+            <h2 class="text-2xl font-semibold mb-2">🏠 A Regra de Ouro 🏢</h2>
+            <p class="mb-4 text-gray-700">O Vale-Transporte é um benefício legal destinado <strong>exclusivamente</strong> para o deslocamento residência-trabalho e vice-versa, utilizando transporte público.</p>
+            
+            <div class="illustration-container">
+                <div class="text-center">
+                    <div class="text-5xl mb-2">🏠</div>
+                    <span class="font-bold text-sm">CASA</span>
+                </div>
+                
+                <div class="path-line"></div>
+                
+                <div class="text-center">
+                    <div class="text-5xl mb-2">🏢</div>
+                    <span class="font-bold text-sm">ESCRITÓRIO</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pode vs Não Pode -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- O que PODE -->
+            <section class="card p-6 border-t-4 border-green-500">
+                <h3 class="text-xl font-bold mb-4 flex items-center text-green-700">
+                    <span class="mr-2 text-2xl">✅</span> O que PODE
+                </h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1">🚌</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">Transporte Coletivo Público</p>
+                            <p class="text-sm text-gray-600">Ônibus, Metrô, Trem, Barca e VLT para ir e voltar do iFood.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1">📲</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">Recarga de Cartões</p>
+                            <p class="text-sm text-gray-600">Bilhete Único, RioCard, Cartão TOP, etc., usando o saldo de mobilidade.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1">💼</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">Dias de Escritório</p>
+                            <p class="text-sm text-gray-600">Usar nos dias em que você sinalizou que estaria presencial.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- O que NÃO PODE -->
+            <section class="card p-6 border-t-4 border-red-500">
+                <h3 class="text-xl font-bold mb-4 flex items-center text-red-700">
+                    <span class="mr-2 text-2xl">❌</span> O que NÃO PODE
+                </h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1">⛽</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">Combustível</p>
+                            <p class="text-sm text-gray-600">O VT não deve ser usado para abastecer veículo particular.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1">🛍️</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">Compras Pessoais</p>
+                            <p class="text-sm text-gray-600">Mercados, farmácias ou lazer. O saldo é exclusivo para transporte.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1">🚗</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">Apps de Viagem (Uso Pessoal)</p>
+                            <p class="text-sm text-gray-600">Viagens particulares de Uber/99 fora do trajeto casa-trabalho.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 mt-1">🤝</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">Empréstimo ou Venda</p>
+                            <p class="text-sm text-gray-600">Passar o cartão para terceiros ou vender o saldo é proibido por lei.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Alerta Importante -->
+        <div class="mt-12 bg-yellow-50 border-2 border-yellow-200 rounded-xl p-6 flex items-start">
+            <span class="text-3xl mr-4">⚠️</span>
+            <div>
+                <h4 class="font-bold text-yellow-800 text-lg">Atenção ao Compliance</h4>
+                <p class="text-yellow-700">O uso indevido do Vale-Transporte é considerado <strong>falta grave</strong>, podendo resultar em medidas disciplinares, conforme a legislação trabalhista brasileira (Lei 7.418/85).</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 mb-8 text-gray-400 text-sm">
+            <p>© 2024 iFood - Gente & Gestão</p>
+            <p>Em caso de dúvidas, procure o time de Benefícios ou abra um chamado no Portal do Colaborador.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
